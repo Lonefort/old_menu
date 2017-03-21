@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="content-language" content="en-GB" />
+      <title>Vezio : Navigation Drawer</title>
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+      <!--Import materialize.css and other css file-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"/>
+      <link type="text/css" rel="stylesheet" href="css/hamburgers.css">
+      <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css">
+      <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+      <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+      <!-- Favicon -->
+      <!-- <link rel="shortcut icon" type="image/ico" href="favicon.ico"/> -->
+
+    </head>
+<body>
+
+<header>
+
+<div class="row top-bar">
+  <div class="col m4 s7">
+    <div class="nav-drawer">
+      <div id="slide-out" class="side-nav">
+        <div class="dashboard">
+          <a class="hastip" title="Dashboard" href="#"><i class="material-icons left">dashboard</i> <span class="menu-name">Dashboard</span></a>
+        </div>
+        <div class="scroll">
+          <div class="timetracking">
+            <h5 class="title truncate"><span>Timetracking</span></h5>
+            <a class="hastip" title="Tracker" href="#"><i class="material-icons left">alarm</i> <span class="menu-name">Tracker</span></a>
+            <a class="hastip" title="Reports" href="#"><i class="material-icons left">report</i> <span class="menu-name">Roles & permission</span></a>
+            <a class="hastip" title="Summary" href="#"><i class="material-icons left">equalizer</i> <span class="menu-name">Summary</span></a>
+          </div>
+          <div class="company-management">
+            <h5 class="title truncate"><span>Company management</span></h5>
+            <a class="hastip" title="Invoices" href="#"><i class="material-icons left">insert_drive_file</i> <span class="menu-name">Invoices</span></a>
+            <a class="hastip" title="Roles & permission" href="#"><i class="material-icons left">people</i> <span class="menu-name">Roles & permission</span></a>
+            <a class="hastip" title="Company lists" href="#"><i class="material-icons left">view_list</i> <span class="menu-name">Company lists</span></a>
+          </div>
+          <div class="work-place">
+            <h5 class="title truncate"><span>Workplace</span></h5>
+            <a class="hastip" title="Workspace" href="#"><i class="material-icons left">laptop_mac</i> <span class="menu-name">Workspace</span></a>
+            <a class="hastip" title="Project List" href="#"><i class="material-icons left">business</i> <span class="menu-name">Project List</span></a>
+            <a class="hastip" title="Timeboard" href="#"><i class="material-icons left">access_time</i> <span class="menu-name">Timeboard</span></a>
+          </div>
+        </div>
+
+        <div class="setting-feedback">
+          <a class="hastip" title="Settings" href="#"><i class="material-icons left">settings</i> <span class="menu-name">Settings</span></a>
+          <a class="hastip" title="Help & Feedback" href="#"><i class="material-icons left">help</i> <span class="menu-name">Help & Feeback</span></a>
+        </div>
+      </div>
+
+      <a data-activates="slide-out" class="menu button-collapse" data-menu="6">
+        <div class="icon"></div>
+        <span>Job listings</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="col m5 hide-on-small-only">
+    <div class="search">
+      <input id="search" type="text" name="" value="Search">
+      <label for="search"><i class="material-icons">search</i></label>
+    </div>
+  </div>
+
+  <div class="col m3 s5">
+    <div class="action-bar right-align">
+      <a href="#" class="search-icon hide-on-med-and-up"><i class="material-icons">search</i></a>
+      <a href="#" class="notification"><i class="material-icons">notifications</i></a>
+      <!-- Dropdown Trigger -->
+     <a class='dropdown-button' href='#' data-activates='dropdown1'>Miro <i class="material-icons right">arrow_drop_down</i></a>
+
+     <!-- Dropdown Structure -->
+      <!-- <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul> -->
+    </div>
+  </div>
+</div>
+
+
+<!--Tabs  -->
+<div class="row tabs-row">
+      <ul class="tabs">
+        <li class="tab"><a class="active" href="#all">All</a></li>
+        <li class="tab"><a href="#archived">Archived</a></li>
+      </ul>
+</div>
+</header>
+
+
+<!-- Main for All data  -->
+<main id="all" class="data-table">
+  <div class="container">
+      <div class="row">
+          <div class="col s12">
+            <a class="btn add-new" href="#"><i class="material-icons left">add</i> Post a new job</a>
+          </div>
+
+          <div class="col s12">
+            <div class="table-wrapper">
+              <div class="table-header selected">
+                <h4 class="left"><a class="remove" href="#"><i class="material-icons left">close</i></a> 1 listings selected</h4>
+                <div class="right">
+                    <a id="table_search" class="hide" href="#">
+                      <i class="search material-icons left">search</i>
+                      <i class="close material-icons left">close</i>
+                    </a>
+                    <a href="#"><i class="material-icons left">delete</i></a>
+                    <a href="#"><i class="material-icons left">more_vert</i></a>
+                </div>
+              </div>
+              <table id="table" class="row-border">
+              <thead>
+                <tr>
+                    <th data-priority="1" data-field="job-title"><input type="checkbox" class="filled-in" id="select-all" /><label for="select-all"></label>Job title
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                    <th data-priority="2" data-field="applicants">
+                      Applicants
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                    <th data-priority="3" data-field="status">
+                      Status
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                    <th data-priority="4" data-field="created">
+                      Created
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                    <th data-priority="5" data-field="expires">
+                      Expires
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                    <th data-priority="6" data-field="views">
+                      Views
+                      <span class="sort">
+                        <a href="#"><i class="material-icons">keyboard_arrow_up</i></a>
+                        <a href="#"><i class="material-icons">keyboard_arrow_down</i></a>
+                      </span>
+                    </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="filled-in" id="tr1" checked/><label for="tr1"></label>UI/UX Designer</td>
+                  <td>14</td>
+                  <td><span class="status opened">Opened</span></td>
+                  <td>Jan 13 2015 15:03</td>
+                  <td>Dec 24 2016 15:03</td>
+                  <td>1925</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="filled-in" id="tr2" /><label for="tr2"></label>Java Developer</td>
+                  <td>9</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>Apr 5 2014 13:02</td>
+                  <td>Jan 1 2016 15:03</td>
+                  <td>58313</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="filled-in" id="tr3" /><label for="tr3"></label>Cleaning lady</td>
+                  <td>2631</td>
+                  <td><span class="status expiring">Will expire soon</span></td>
+                  <td>Jan 13 2015 15:03</td>
+                  <td>Dec 24 2016 15:03</td>
+                  <td>1,235,631</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="filled-in" id="tr4" /><label for="tr4"></label>Mountain Dew drinker</td>
+                  <td>0</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>Apr 5 2014 13:02</td>
+                  <td>Jan 1 2016 15:03</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="filled-in" id="tr5" /><label for="tr5"></label>Babysitting</td>
+                  <td>0</td>
+                  <td><span class="status closed">Closed</span></td>
+                  <td>Apr 5 2014 13:02</td>
+                  <td>Jan 1 2016 15:03</td>
+                  <td>144</td>
+                </tr>
+
+              </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/less.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/tooltipsy.min.js"></script>
+      <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="js/side-nav.js"></script>
+      <script type="text/javascript" src="js/data-table.js"></script>
+    </body>
+  </html>

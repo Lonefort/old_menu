@@ -1,0 +1,68 @@
+
+/*---------Transition--------*/
+a, button{
+	transition:all 0.4s ease-in-out;
+
+}
+
+/*--------Clearfix-------*/
+.clearfix{
+	clear: both !important;
+}
+
+/*---------Image-----*/
+img{
+	max-width: 100%;
+}
+
+/*---Link-----*/
+a{
+	color: @theme;
+	&:hover{
+		color:@theme;
+	}
+}
+
+// Row
+.row{
+	margin-bottom: 0;
+}
+::-moz-selection {
+    text-shadow: none;
+    background: @theme;
+    color: #fff;
+}
+
+::selection {
+    text-shadow: none;
+    background: @theme;
+    color: #fff;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+// margin-padding
+.mb-0{
+	margin-bottom: 0;
+}
+.ml-0{
+	margin-left: 0;
+}
+.mt-0{
+ margin-top: 0;
+}
+.mr-0{
+	margin-right: 0;
+}
+.pl-0{
+ padding-left: 0;	
+}
+.no-border{
+	border:none;
+}
